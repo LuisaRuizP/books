@@ -1,0 +1,21 @@
+<%= simple_form_for(book) do |f| %>
+ <%= form.label :tittle %>
+  <%= form.text_field :tittle %>
+
+  <%= form.label :photos %>
+  <%= f.input :photo, as: :file %>
+   <%= form.submit %>
+<% end %>
+
+<%= form_for([@book, review]) do |f| %>
+  <%= f.label :rating %>
+  <%= f.select :rating, options_for_select([5, 4, 3, 2, 1]) %>
+
+  <%= f.label :content %>
+  <%= f.text_area :content, rows: 4 %>
+
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+
+  <%= f.submit 'Submit' %>
+<% end %>

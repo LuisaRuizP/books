@@ -1,2 +1,110 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner_HP" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://assets.weforum.org/article/image/JMF96ETfn1kSViVnUou1Z0XIDwWcPpT5mrPc7-ytpAc.jpg);">
+  <div class="home_container">
+    <h1>BOOKS <strong></h1>
+    <p>Change your life and find your favourite book!</p>
+    <a class="btn btn-flat banner-btn" href="/index">Review now</a>
+  </div>
+
+  <div class="car container">
+  <div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: books_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :tittle,
+            params[:tittle],
+            class: "form-control",
+            placeholder: "Tittle"
+        %>
+        <%= text_field_tag :publishing_year,
+            params[:publishing_year],
+            class: "form-control",
+            placeholder: "Publishing Year"
+        %>
+        <%= text_field_tag :author,
+            params[:author],
+            class: "form-control",
+            placeholder: "Author"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn_form btn-primary" %>
+    <% end %>
+  </div>
+</div>
+</div>
+</div>
+<div class="card-group">
+  <div class="card">
+    <img src="https://kbimages1-a.akamaihd.net/593039c5-50f9-40f3-9006-12cf8cf8deaa/1200/1200/False/the-metamorphosis-115.jpg"  class="card-img-top img-fluid" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">The Metamorphosis</h5>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSKPneOFTvRKKmb4Qzd6_gF1bCqKB_RhJ3HlfZysW7h3CYfnoXf" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Pride and Prejudice</h5>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR1tXph6SVIgQBULTiQzm3ITCpVIq2W3rLUxHFrSbErsWhznkI1" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Don Quixote</h5>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+<div class="card-group">
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStFCCvaLI6NGiRy8BOY-61VK7abTi8Sbw5UtZPd3EHeDKyZZwY" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Anna Karenina</h5>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTfON1cFmFENLUz693WqLIqJZsNxVcs9uT0f8GDhnFnOv8AccGp" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Moby-Dick</h5>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQa4k_wjzFNLG5GUJrM3LYbY3bSHSIdSuGF3XZrZgBz9-31n90P" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Lolita</h5>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+<div class="card-group">
+  <div class="card">
+    <img src="https://hekint.org/wp-content/uploads/2021/09/Garcia-Marquez-G.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">One Hundred Years of Solitude</h5>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTwnJsDNYH6qPU4JX6t7uq0kDT8wmBBumm_k4xDsocVPFpEQ9v2" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">The Stranger</h5>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQAE2z4JlX365IRqYl371DS1LrqXfTr2d9SZ7G2TMAGDfAaESGb" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Democracy: A Life</h5>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-links">
+    <a href="https://github.com/LuisaRuizP?tab=repositories"><i class="fab fa-github"></i></a>
+    <a href="www.linkedin.com/in/luisa-ruiz-pastran"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    <a href="https://github.com/LuisaRuizP/books">Luisa Ruiz</a>
+  </div>
+</div>

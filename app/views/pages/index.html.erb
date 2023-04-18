@@ -1,0 +1,21 @@
+<main class="container">
+  <h1 class="my-4">All Books</h1>
+  <p>People who read books live for around two years longer than those who don’t, irrespective of gender, wealth, education or health, according to a Yale University study.</p >
+
+
+  <div class="row">
+    <% @books.each do |book| %>
+      <div class="col-md-4 col-lg-3 mb-4">
+        <div class="card h-100">
+          <%= link_to book_path(book) do %>
+            <%= image_tag book.photo, alt:book.tittle, class: "card-img-top" %>
+          <% end %>
+          <div class="card-body">
+            <h5 class="card-title"><%= book.tittle %></h5>
+            <p class="card-text"><%= book.publishing_year %></p >
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</main>
